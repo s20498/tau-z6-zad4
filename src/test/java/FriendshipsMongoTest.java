@@ -26,9 +26,7 @@ public class FriendshipsMongoTest {
     @Test
     public void mockingWorksAsExpected(){
         Person joe = new Person("Joe");
-        //Zapisanie zachowania - co sie ma stac
         when(friends.findByName("Joe")).thenReturn(joe);
-        //Odpalenie obiektu do sprawdzenia zachowania
         assertEquals(joe, friends.findByName("Joe"));
     }
 
